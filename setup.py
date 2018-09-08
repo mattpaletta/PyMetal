@@ -1,0 +1,29 @@
+# setup.py
+from distutils.core import setup
+from distutils.extension import Extension
+from Cython.Distutils import build_ext
+
+# clang++ -std=c++11 -x objective-c++ -mmacosx-version-min=10.13 -c mtlpp.mm -o mtlpp.o
+
+
+setup(
+        ext_modules=[
+            Extension("pymtlpp",
+              ["metal/metal.pyx", "metal/metal.cpp"],
+              language="c++",
+                      extra_compile_args=["-std=c++11", "-mmacosx-version-min=10.13"],
+                      extra_link_args=["-mmacosx-version-min=10.13",
+                                       "-framework", "Metal",
+                                          "-framework", "MetalKit",
+                                          "-framework", "Cocoa",
+                                          "-framework", "CoreFoundation",
+                                          "-fobjc-link-runtime"],)],
+        cmdclass = {'build_ext': build_ext})
+
+
+# setup(
+#         ext_modules=[
+#             Extension("rectangle",
+#               ["rect/rect.pyx", "rect/Rectangle.cpp"],
+#               language="c++",)],
+#         cmdclass = {'build_ext': build_ext})

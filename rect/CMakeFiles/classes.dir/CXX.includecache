@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Volumes/Scratch Disk/Programming Projects/PyMetal/metal/mtlpp.cpp
+boost/python.hpp
+-
+boost/python/list.hpp
+-
+boost/python/extract.hpp
+-
+string
+-
+sstream
+-
+vector
+-
+../mtlpp/mtlpp.hpp
+/Volumes/Scratch Disk/Programming Projects/PyMetal/mtlpp/mtlpp.hpp
+
+/Volumes/Scratch Disk/Programming Projects/PyMetal/mtlpp/mtlpp.hpp
+stdint.h
+-
+assert.h
+-
+functional
+-
+CoreFoundation/CFAvailability.h
+-
+

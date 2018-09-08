@@ -1,0 +1,1 @@
+clang++    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/mtlpp.dir/Volumes/Scratch_Disk/Programming_Projects/PyMetal/mtlpp/mtlpp.mm.o  -o mtlpp classes.so 

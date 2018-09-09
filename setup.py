@@ -3,14 +3,15 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-# clang++ -std=c++11 -x objective-c++ -mmacosx-version-min=10.13 -c mtlpp.mm -o mtlpp.o
+# ARCHFLAGS="-arch x86_64" python3 setup.py build_ext --inplace
+# clang++ -std=c++11 -x objective-c++ -mmacosx-version-min=10.13 -fPIC -c mtlpp.mm -o mtlpp.o
 
 
 setup(
         ext_modules=[
-            Extension("pymtlpp",
-              ["metal/metal.pyx", "metal/metal.cpp"],
-              language="c++",
+            Extension(name="pymtlpp",
+                      sources=["metal/pymtlpp.pyx", "metal/metal.cpp"],
+                      language="c++",
                       extra_compile_args=["-std=c++11", "-mmacosx-version-min=10.13"],
                       extra_link_args=["-mmacosx-version-min=10.13",
                                        "-framework", "Metal",

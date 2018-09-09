@@ -12,4 +12,4 @@ To compile, I am using the following commands:
 
 to compile the library.  Then to compile the cython code:
 
-ARCHFLAGS="-arch x86_64" python3 setup.py build_ext --inplace
+`ARCHFLAGS="-arch x86_64" python3 setup.py build_ext --inplace`

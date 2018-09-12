@@ -1,4 +1,0 @@
-/Volumes/Scratch Disk/Programming Projects/PyMetal/metal/CMakeFiles/rebuild_cache.dir
-/Volumes/Scratch Disk/Programming Projects/PyMetal/metal/CMakeFiles/edit_cache.dir
-/Volumes/Scratch Disk/Programming Projects/PyMetal/metal/CMakeFiles/classes.dir
-/Volumes/Scratch Disk/Programming Projects/PyMetal/metal/CMakeFiles/mtlpp.dir

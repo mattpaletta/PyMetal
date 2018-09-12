@@ -1,1 +1,0 @@
-clang++   -bundle -Wl,-headerpad_max_install_names  -o classes.so CMakeFiles/classes.dir/mtlpp.cpp.o 

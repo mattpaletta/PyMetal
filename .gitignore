@@ -164,3 +164,6 @@ fabric.properties
 .idea/modules.xml
 .idea/thriftCompiler.xml
 .idea/workspace.xml
+/metal/pymtlpp.cpp
+/build/
+/env/

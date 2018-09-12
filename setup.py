@@ -12,13 +12,15 @@ setup(
             Extension(name="pymtlpp",
                       sources=["metal/pymtlpp.pyx", "metal/metal.cpp"],
                       language="c++",
-                      extra_compile_args=["-std=c++11", "-mmacosx-version-min=10.13"],
+                      extra_objects=["mtlpp.o"],
+                      extra_compile_args=["-std=c++11", "-mmacosx-version-min=10.13", "-fPIC"],
                       extra_link_args=["-mmacosx-version-min=10.13",
                                        "-framework", "Metal",
                                           "-framework", "MetalKit",
                                           "-framework", "Cocoa",
                                           "-framework", "CoreFoundation",
-                                          "-fobjc-link-runtime"],)],
+                                          "-fobjc-link-runtime",
+                                          "-fPIC"],)],
         cmdclass = {'build_ext': build_ext})
 
 
